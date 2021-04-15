@@ -15,7 +15,7 @@ module.exports = function serve(cb) {
     server.init({
         server: 'build',
         notify: false,
-        open: true,
+        open: false,
         cors: true
     })
 

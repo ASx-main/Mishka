@@ -10,7 +10,6 @@
   "rules": {
     "indentation": 2,
     "at-rule-no-vendor-prefix": true,
-    "at-rule-empty-line-before": "always",
     "scss/selector-no-redundant-nesting-selector": true,
     "scss/at-import-partial-extension": "never",
     "block-closing-brace-newline-before": "always",

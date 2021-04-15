@@ -1,0 +1,176 @@
+@import "../utils/variables";
+
+@mixin radio {
+  opacity: 0;
+
+  &:checked + .label-radio::before {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:checked + .label-radio::after {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    top: calc((52px - 22px) / 2);
+    left: calc((52px - 22px) / 2);
+    background-color: #62d1ba;
+    border-radius: 50%;
+  }
+
+  &:hover + .label-radio::before {
+    border-color: #62d1ba;
+  }
+}
+
+@mixin label-radio {
+  position: relative;
+  padding: calc((52px - 16px) / 2) 62px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 52px;
+    height: 52px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border: 2px solid #444444;
+    border-radius: 50%;
+  }
+}
+
+@mixin checkbox {
+  opacity: 0;
+
+  &:checked + .label-checkbox::before {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:checked + .label-checkbox::after {
+    position: absolute;
+    content: "";
+    width: 33px;
+    height: 22px;
+    top: call((54px - 33px) / 2);
+    left: calc((52px - 22px) / 2);
+    background-image: url("../../img/checkbox.png");
+  }
+
+  &:hover + .label-checkbox::before {
+    border-color: #62d1ba;
+  }
+}
+
+@mixin label-checkbox {
+  position: relative;
+  padding: calc((54px - 16px) / 2) 62px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 54px;
+    height: 52px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border: 2px solid #444444;
+  }
+}
+
+@mixin input-text {
+  border: none;
+  border-bottom: 2px solid #000000;
+  font-size: 19px;
+  margin-left: 25px;
+  padding-bottom: 15px;
+  outline: none;
+
+  &::placeholder {
+    opacity: $opacity30;
+  }
+
+  &:hover {
+    border-bottom: 2px solid #62d1ba;
+  }
+
+  &:focus {
+    border-bottom: 2px solid #62d1ba;
+  }
+}
+
+@mixin label-text {
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+
+@mixin phone-input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #000000;
+  font-size: 19px;
+  font-weight: 400;
+  padding-bottom: 15px;
+
+  &::placeholder {
+    opacity: $opacity30;
+  }
+
+  &:hover + .label-phone::after {
+    background-image: url("../../img/phone-hover.png");
+  }
+
+  &:focus + .label-phone::after {
+    background-image: url("../../img/phone-active.png");
+  }
+
+  &:hover {
+    border-bottom: 2px solid #62d1ba;
+  }
+
+  &:focus {
+    border-bottom: 2px solid #62d1ba;
+  }
+}
+
+@mixin label-phone-input {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 24px;
+    top: 0;
+    left: 220px;
+    background-image: url("../../img/phone.png");
+  }
+}
+
+@mixin input-textarea($width-textarea, $height-textarea) {
+  font-family: "Open Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #444444;
+  resize: vertical;
+  width: $width-textarea;
+  height: $height-textarea;
+  padding: 17px;
+  border: 2px solid #444444;
+
+  &::placeholder {
+    font-size: 19px;
+    font-family: "Open Sans", sans-serif;
+    opacity: $opacity30;
+  }
+
+  &:hover {
+    border: 2px solid #62d1ba;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid #62d1ba;
+  }
+}

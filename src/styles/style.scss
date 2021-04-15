@@ -1,4 +1,5 @@
 @import "utils/normalize";
+@import "common/common";
 
 *,
 *::before,
@@ -8,6 +9,7 @@
 
 html {
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {

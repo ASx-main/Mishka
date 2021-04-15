@@ -1,0 +1,82 @@
+@import "../utils/variables";
+
+
+@mixin btn-green($img-btn, $img-btn-hover, $img-btn-active, $img-width, $img-height,) {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #ffffff;
+  background-color: #56c3b2;
+  padding: 35px;
+  width: 525px;
+
+  &::after {
+    content: "";
+    width: $img-width;
+    height: $img-height;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    background-image: url($img-btn);
+  }
+
+  &:hover {
+    background-color: #59d5bc;
+  }
+
+  &:hover::after {
+    background-image: url($img-btn-hover);
+  }
+
+  &:active::after {
+    background: url($img-btn-active);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@mixin main-btn {
+  color: #444444;
+  background-color: #ffffff;
+  border: 2px solid #444444;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 20px 95px;
+  outline: none;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@mixin select-size {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 20px 50px;
+  color: #444444;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  background-color: #ffffff;
+
+  &:hover {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid #62d1ba;
+  }
+}

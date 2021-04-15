@@ -1,0 +1,210 @@
+@import "../mixins/link";
+@import "../mixins/button";
+@import "../utils/variables";
+
+.big-link {
+  @include link(17px);
+}
+
+.link {
+  @include link(15px);
+}
+
+.cart-link {
+  @include link(17px);
+
+  position: relative;
+  margin-left: 41px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -41px;
+    width: 21px;
+    height: 18px;
+    background-image: url("../../img/basket.png");
+  }
+
+  &:hover::before {
+    background-image: url("../../img/basket-hover.png");
+  }
+
+  &:active::before {
+    background-image: url("../../img/basket-active.png");
+  }
+}
+
+.mail-link {
+  @include mail-link;
+}
+
+.btn-interior {
+  @include btn-green("../../img/interior.png", "../../img/interior-hover.png", "../../img/interior-active.png", 40px, 62px,);
+}
+
+.btn-toys {
+  @include btn-green("../../img/toy.png", "../../img/toy-hover.png", "../../img/toy-active.png", 60px, 60px,);
+}
+
+.main-btn {
+  @include main-btn;
+}
+
+.arrow {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.btn-arrow {
+  background: #ffffff;
+  border: 1px solid #ececec;
+  padding: 13px 40px;
+  outline: none;
+
+  &:hover {
+    opacity: $opacity60;
+  }
+
+  &:active {
+    opacity: $opacity30;
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 10px 90px;
+}
+
+.icon-instagram {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-image: url("../../img/insta.png");
+    top: 0;
+    left: 0;
+  }
+
+  &:hover::before {
+    background-image: url("../../img/insta-hover.png");
+  }
+
+  &:active::before {
+    opacity: $opacity30;
+  }
+}
+
+.icon-fb {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 28px;
+    background-image: url("../../img/fb.png");
+    top: 0;
+    left: 60px;
+  }
+
+  &:hover::before {
+    background-image: url("../../img/fb-hover.png");
+  }
+
+  &:active::before {
+    opacity: $opacity30;
+  }
+}
+
+.icon-twitter {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 20px;
+    background-image: url("../../img/twitter.png");
+    top: 0;
+    left: 120px;
+  }
+
+  &:hover::before {
+    background-image: url("../../img/twitter-hover.png");
+  }
+
+  &:active::before {
+    opacity: $opacity30;
+  }
+}
+
+.copyright {
+  font-family: "Open Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #000000;
+
+  &:active {
+    opacity: $opacity30;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 34px;
+    top: -5px;
+    left: 150px;
+    background-image: url("../../img/copyrigth.png");
+  }
+
+  &:hover::after {
+    background-image: url("../../img/copyrigth-hover.png");
+  }
+
+  &:active::after {
+    opacity: $opacity30;
+  }
+}
+
+.main-logo {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 149px;
+    height: 72px;
+    top: 0;
+    left: 0;
+    background-image: url("../../img/mishka-logo.png");
+  }
+
+  &:hover::before {
+    opacity: $opacity60;
+  }
+
+  &:active::before {
+    opacity: $opacity30;
+  }
+}
+
+.footer-logo {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 102px;
+    height: 34px;
+    top: 0;
+    left: 0;
+    background-image: url("../../img/logo-footer.png");
+  }
+
+  &:hover::before {
+    background-image: url("../../img/logo-footer-hover.png");
+  }
+
+  &:active::before {
+    opacity: $opacity30;
+  }
+}
+
