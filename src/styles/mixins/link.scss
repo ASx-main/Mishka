@@ -16,9 +16,9 @@
   }
 }
 
-@mixin mail-link {
+@mixin mail-link ($size-mail) {
   font-family: "Open Sans", sans-serif;
-  font-size: 17px;
+  font-size: $size-mail;
   font-weight: 400;
   line-height: 30px;
   color: #444444;
@@ -32,4 +32,3 @@
     opacity: $opacity30;
   }
 }
-

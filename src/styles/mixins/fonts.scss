@@ -1,1 +1,20 @@
-@import "../utils/variables";
+@mixin h1 ($size-h1) {
+  font-size: $size-h1;
+  font-weight: 700;
+  line-height: 30px;
+  color: #010000;
+}
+
+@mixin h2 ($size-h2) {
+  font-size: $size-h2;
+  font-weight: 700;
+  line-height: 30px;
+  color: #000000;
+}
+
+@mixin h3 ($size-h3, $color-h3) {
+  font-size: $size-h3;
+  font-weight: 700;
+  line-height: 30px;
+  color: $color-h3;
+}

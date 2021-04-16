@@ -1,7 +1,6 @@
 @import "../utils/variables";
 
-
-@mixin btn-green($img-btn, $img-btn-hover, $img-btn-active, $img-width, $img-height,) {
+@mixin btn-green ($padding-green, $width-btn,$img-btn, $img-btn-hover, $img-btn-active, $img-width, $img-height,$top-img-position, $right-img-position) {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -12,16 +11,16 @@
   line-height: 30px;
   color: #ffffff;
   background-color: #56c3b2;
-  padding: 35px;
-  width: 525px;
+  padding: $padding-green 35px;
+  width: $width-btn;
 
   &::after {
     content: "";
     width: $img-width;
     height: $img-height;
     position: absolute;
-    top: 35px;
-    right: 35px;
+    top: $top-img-position;
+    right: $right-img-position;
     background-image: url($img-btn);
   }
 
@@ -42,14 +41,14 @@
   }
 }
 
-@mixin main-btn {
+@mixin main-btn ($padding-left-right) {
   color: #444444;
   background-color: #ffffff;
   border: 2px solid #444444;
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
-  padding: 20px 95px;
+  padding: 20px $padding-left-right;
   outline: none;
 
   &:hover {
@@ -80,3 +79,4 @@
     border: 2px solid #62d1ba;
   }
 }
+

@@ -36,19 +36,7 @@
 }
 
 .mail-link {
-  @include mail-link;
-}
-
-.btn-interior {
-  @include btn-green("../../img/interior.png", "../../img/interior-hover.png", "../../img/interior-active.png", 40px, 62px,);
-}
-
-.btn-toys {
-  @include btn-green("../../img/toy.png", "../../img/toy-hover.png", "../../img/toy-active.png", 60px, 60px,);
-}
-
-.main-btn {
-  @include main-btn;
+  @include mail-link(15px);
 }
 
 .arrow {
@@ -75,7 +63,10 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin: 10px 90px;
+  align-items: center;
+  margin: 0 90px;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .icon-instagram {
@@ -85,7 +76,7 @@
     width: 22px;
     height: 22px;
     background-image: url("../../img/insta.png");
-    top: 0;
+    top: 35px;
     left: 0;
   }
 
@@ -105,8 +96,8 @@
     width: 15px;
     height: 28px;
     background-image: url("../../img/fb.png");
-    top: 0;
-    left: 60px;
+    top: 30px;
+    left: 65px;
   }
 
   &:hover::before {
@@ -125,7 +116,7 @@
     width: 23px;
     height: 20px;
     background-image: url("../../img/twitter.png");
-    top: 0;
+    top: 35px;
     left: 120px;
   }
 
@@ -139,11 +130,16 @@
 }
 
 .copyright {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
   font-family: "Open Sans", sans-serif;
   font-size: 19px;
   font-weight: 700;
   line-height: 18px;
   color: #000000;
+  padding: 30px 0;
+  margin: 0 70px;
 
   &:active {
     opacity: $opacity30;
@@ -154,7 +150,7 @@
     content: "";
     width: 27px;
     height: 34px;
-    top: -5px;
+    top: 20px;
     left: 150px;
     background-image: url("../../img/copyrigth.png");
   }
