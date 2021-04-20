@@ -41,4 +41,8 @@ p {
   font-weight: 400;
   color: #444444;
   line-height: 24px;
+
+  @include media-tablet {
+    font-size: 17px;
+  }
 }

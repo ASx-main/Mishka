@@ -1,6 +1,7 @@
 @import "../mixins/link";
 @import "../mixins/button";
 @import "../utils/variables";
+@import "../mixins/media";
 
 .big-link {
   @include link(17px);
@@ -10,33 +11,13 @@
   @include link(15px);
 }
 
-.cart-link {
-  @include link(17px);
-
-  position: relative;
-  margin-left: 41px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -41px;
-    width: 21px;
-    height: 18px;
-    background-image: url("../../img/basket.png");
-  }
-
-  &:hover::before {
-    background-image: url("../../img/basket-hover.png");
-  }
-
-  &:active::before {
-    background-image: url("../../img/basket-active.png");
-  }
-}
 
 .mail-link {
   @include mail-link(15px);
+
+  @include media-tablet {
+    @include mail-link(17px);
+  }
 }
 
 .arrow {
@@ -64,9 +45,14 @@
   justify-content: space-between;
   position: relative;
   align-items: center;
+  width: 141px;
   margin: 0 90px;
   padding: 40px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  @include media-tablet {
+    border-bottom: none;
+  }
 }
 
 .icon-instagram {
@@ -177,26 +163,6 @@
 
   &:hover::before {
     opacity: $opacity60;
-  }
-
-  &:active::before {
-    opacity: $opacity30;
-  }
-}
-
-.footer-logo {
-  &::before {
-    position: absolute;
-    content: "";
-    width: 102px;
-    height: 34px;
-    top: 0;
-    left: 0;
-    background-image: url("../../img/logo-footer.png");
-  }
-
-  &:hover::before {
-    background-image: url("../../img/logo-footer-hover.png");
   }
 
   &:active::before {

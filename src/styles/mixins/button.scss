@@ -1,6 +1,14 @@
 @import "../utils/variables";
 
-@mixin btn-green ($padding-green, $width-btn,$img-btn, $img-btn-hover, $img-btn-active, $img-width, $img-height,$top-img-position, $right-img-position) {
+@mixin btn-green(
+  $padding-green,
+  $img-btn,
+  $img-btn-hover,
+  $img-btn-active,
+  $img-width,
+  $img-height,
+  $top-img-position,
+  $right-img-position) {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -12,7 +20,7 @@
   color: #ffffff;
   background-color: #56c3b2;
   padding: $padding-green 35px;
-  width: $width-btn;
+  width: 100%;
 
   &::after {
     content: "";
@@ -41,7 +49,7 @@
   }
 }
 
-@mixin main-btn ($padding-left-right) {
+@mixin main-btn($padding-left-right) {
   color: #444444;
   background-color: #ffffff;
   border: 2px solid #444444;
