@@ -149,24 +149,3 @@
     opacity: $opacity30;
   }
 }
-
-.main-logo {
-  &::before {
-    position: absolute;
-    content: "";
-    width: 149px;
-    height: 72px;
-    top: 0;
-    left: 0;
-    background-image: url("../../img/mishka-logo.png");
-  }
-
-  &:hover::before {
-    opacity: $opacity60;
-  }
-
-  &:active::before {
-    opacity: $opacity30;
-  }
-}
-
