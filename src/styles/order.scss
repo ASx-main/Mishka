@@ -1,0 +1,390 @@
+@import "mixins/button";
+@import "mixins/inputs";
+@import "utils/variables";
+@import "mixins/link";
+@import "mixins/fonts";
+
+.header-order {
+  width: 100%;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  background: #ffffff;
+}
+
+.header-nav-order {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px 0 116px;
+  padding: 22px 0;
+
+  @include media-tablet {
+    padding: 0;
+    margin: 0 50px;
+  }
+}
+
+.logo-header-order {
+  display: none;
+
+  @include media-tablet {
+    display: block;
+    padding: 20px 0;
+
+    &:focus {
+      opacity: $opacity60;
+    }
+  }
+}
+
+
+.logo-blue-order {
+  position: relative;
+  padding: 15px;
+  width: 86px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 86px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/mishka-logo-mobile.png");
+  }
+
+  &:hover::before {
+    opacity: $opacity60;
+  }
+
+  &:active::before {
+    opacity: $opacity30;
+  }
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.btn-menu-order {
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.main-title-order {
+  background-color: #f1f1f1;
+  position: relative;
+}
+
+.zigzag-design-order {
+  display: none;
+
+  @include media-tablet {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 212px;
+    left: 0;
+  }
+}
+
+.h1-order {
+  @include h1(27px);
+
+  color: #231f20;
+  text-align: center;
+  padding: 78px 38px;
+
+  @include media-tablet {
+    @include h1(43px);
+  }
+}
+
+.main-container {
+  margin: 0 30px;
+
+  @include media-tablet {
+    margin: 0 50px;
+  }
+}
+
+.description-form {
+  font-size: 13px;
+  width: 75%;
+  text-align: left;
+  margin: 30px 0;
+
+  @include media-tablet {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.radio-toy {
+  margin: 25px 0 25px 15px;
+}
+
+.radio-interior {
+  margin-left: 15px;
+}
+
+.label-radio {
+  @include label-radio;
+
+  display: inline-block;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.radio {
+  @include radio;
+
+  margin: 15px 0;
+}
+
+.label-checkbox {
+  @include label-checkbox;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+
+  &::before {
+    @include media-tablet {
+      background-color: #f1f1f1;
+    }
+  }
+}
+
+.checkbox {
+  @include checkbox;
+
+  padding: 15px 0;
+}
+
+.input-checkbox {
+  margin-bottom: 20px;
+
+  @include media-tablet {
+    background-color: #f1f1f1;
+  }
+}
+
+.color-checkbox {
+  padding: 30px 10px 22px 0;
+}
+
+.left-color-checkbox {
+  @include media-tablet {
+    margin-right: 50px;
+  }
+}
+
+.input-text {
+  @include input-text;
+}
+
+.label-text {
+  @include label-text;
+
+  @include media-tablet {
+    margin-right: 20px;
+  }
+}
+
+.name-input {
+  margin: 20px 0 20px 0;
+
+  @include media-tablet {
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px 0;
+  }
+}
+
+.contact-input {
+  margin-bottom: 20px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 24px;
+    top: 15px;
+    right: 0;
+    background-image: url("../img/phone.png");
+  }
+
+  &:hover::after {
+    background-image: url("../img/phone-hover.png");
+  }
+
+  @include media-tablet {
+    width: 100%;
+  }
+}
+
+.input-number {
+  @include phone-input;
+
+  @include media-tablet {
+    background-color: #f1f1f1;
+    width: 100%;
+  }
+}
+
+.input-text-field {
+  @include input-textarea(90%, 100%);
+
+  margin: 20px 30px 0 0;
+
+  @include media-tablet {
+    margin: 0 50px 0 0;
+    width: 100%;
+    height: 142px;
+  }
+}
+
+
+.title-input {
+  @include h3(17px, #63d1bb);
+
+  padding-right: 15px;
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.fieldset-input {
+  outline: none;
+  border: none;
+  border-top: 1px solid #63d1bb;
+  padding: 10px 0;
+  margin: 0 30px;
+
+  @include media-tablet {
+    border-top: none;
+    display: flex;
+    align-items: start;
+    margin: 0 50px;
+    padding: 20px 0;
+  }
+}
+
+.main-btn-order {
+  @include main-btn(42px);
+
+  margin: 20px 0;
+}
+
+.footer-order {
+  width: 100%;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media-tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+}
+
+.btn-flex-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include media-tablet {
+    order: 6;
+  }
+}
+
+.title-input-tablet {
+  display: none;
+
+  @include media-tablet {
+    display: block;
+
+    @include h3(17px, #63d1bb);
+
+    margin: 15px 20% 0 0;
+  }
+}
+
+.input-checkbox-tablet {
+  @include media-tablet {
+    display: flex;
+    margin: 20px 0;
+  }
+}
+
+.text-input-tablet {
+  @include media-tablet {
+    width: 100%;
+  }
+}
+
+.title-text-input-tablet {
+  display: none;
+
+  @include media-tablet {
+    display: block;
+
+    @include h3(17px, #63d1bb);
+
+    margin: 0 20% 0 0;
+    align-items: baseline;
+  }
+}
+
+.form-contact-name {
+  @include media-tablet {
+    background-color: #f1f1f1;
+  }
+}
+
+.main-btn-tablet-flex {
+  @include media-tablet {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0 30px 0;
+  }
+}
+
+.text-textarea {
+  @include media-tablet {
+    order: 7;
+  }
+}
+
+.title-contact-tablet {
+  display: none;
+
+  @include media-tablet {
+    display: block;
+
+    @include h3(17px, #63d1bb);
+
+    margin-right: 50px;
+    margin-top: 20px;
+    width: 25%;
+  }
+}
+
+.textarea-input {
+  width: 100%;
+}
+
+.textarea-form {
+  margin: 30px 0 0 0;
+}
