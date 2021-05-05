@@ -112,6 +112,7 @@
 
   @include media-laptop {
     @include h1(53px);
+
     padding: 100px 38px;
   }
 }
@@ -146,9 +147,9 @@
     line-height: 30px;
   }
 
-    @include media-laptop {
-      margin: 112px 0 50px 195px;
-    }
+  @include media-laptop {
+    margin: 112px 0 50px 195px;
+  }
 }
 
 .radio-toy {
@@ -212,7 +213,6 @@
   @include media-laptop {
     width: 30%;
   }
-
 }
 
 
