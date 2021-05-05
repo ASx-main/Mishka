@@ -276,6 +276,10 @@
       font-weight: 700;
     }
   }
+
+  @include media-laptop {
+    margin-left: 410px;
+  }
 }
 
 .main-title {
