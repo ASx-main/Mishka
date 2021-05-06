@@ -7,6 +7,10 @@
   @include link(17px);
 }
 
+.uppercase-text {
+  text-transform: uppercase;
+}
+
 .link {
   @include link(15px);
 }

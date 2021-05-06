@@ -438,7 +438,7 @@
   @include media-laptop {
     display: flex;
     justify-content: flex-start;
-    align-items: start;
+    align-items: flex-start;
   }
 }
 
@@ -512,7 +512,7 @@
 
   @include media-laptop {
     margin-right: 0;
-    align-items: start;
+    align-items: flex-start;
     width: 35%;
   }
 }
@@ -829,7 +829,7 @@
 .contact-mail-address {
   @include media-tablet {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: baseline;
   }
 
@@ -839,7 +839,7 @@
 
   @include media-laptop {
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
 }
 
@@ -892,7 +892,7 @@
   @include media-laptop {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     margin: 81px 45px 0 0;
   }
 }

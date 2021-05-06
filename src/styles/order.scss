@@ -303,7 +303,7 @@
   @include media-tablet {
     border-top: none;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     margin: 0 50px;
     padding: 20px 0;
   }
@@ -363,7 +363,7 @@
   @include media-tablet {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: flex-start;
     margin: 20px 0;
   }
 }
